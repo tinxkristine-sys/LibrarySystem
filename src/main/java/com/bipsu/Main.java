@@ -8,15 +8,6 @@ public class InputHelper {
 
     // Get a non-empty String input
     public static String getString(String prompt) {
-        String input = "";
-        while (input.trim().isEmpty()) {
-            System.out.print(prompt);
-            input = sc.nextLine();
-            if (input.trim().isEmpty()) {
-                System.out.println("Input cannot be empty. Please try again.");
-            }
-        }
-        return input.trim();
     }
 
     // Get a valid integer input
