@@ -62,5 +62,26 @@ public class InputHelper {
         }
     }
 }
+// Get a valid double/decimal input
+public static double getDouble(String prompt) {
+    while (true) {
+        try {
+            System.out.print(prompt);
+            String input = sc.nextLine();
+            return Double.parseDouble(input.trim());
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a decimal number.");
+        }
+    }
+}
 
-
+// Get a name (letters and spaces only, no numbers)
+public static String getValidName(String prompt) {
+    String name;
+    while (true) {
+        name = getString(prompt);
+        if (name.matches("[a-zA-Z ]+")) return name;
+        System.out.println("Name must contain letters only. No numbers allowed.");
+    }
+   }
+}
